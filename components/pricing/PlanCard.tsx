@@ -11,6 +11,10 @@ export default function PlanCard({ plan, currency }: { plan: Plan; currency: Cur
   const t = useTranslations("pricing");
   const tc = useTranslations("common");
   const wa = getWhatsappMessages(locale);
+  const price = plan.prices[currency.code];
+  const offPct = Math.round(
+    (1 - Number(price.now.replace(/,/g, "")) / Number(price.was.replace(/,/g, ""))) * 100,
+  );
 
   return (
     <div
@@ -25,8 +29,14 @@ export default function PlanCard({ plan, currency }: { plan: Plan; currency: Cur
       )}
       <h3 className="text-center text-xl font-bold text-brand-dark">{plan.name}</h3>
       <p className="mt-4 text-center">
-        <span className="text-4xl font-bold text-brand-green">{currency.symbol} {plan.prices[currency.code]}</span>
+        <span className="text-lg font-semibold text-ink/40 line-through">{currency.symbol} {plan.prices[currency.code].was}</span>{" "}
+        <span className="text-4xl font-bold text-brand-green">{currency.symbol} {plan.prices[currency.code].now}</span>
         <span className="text-sm text-ink/60"> {t("perMonth")}</span>
+      </p>
+      <p className="mt-2 text-center">
+        <span className="inline-block rounded-full bg-brand-light px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-green">
+          {offPct}% {t("off")}
+        </span>
       </p>
       <p className="mt-1 text-center text-xs text-ink/50">{t("finalFees")}</p>
       <ul className="mt-6 flex-1 space-y-2.5 text-sm text-ink/80">

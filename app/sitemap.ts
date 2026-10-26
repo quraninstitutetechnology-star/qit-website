@@ -12,7 +12,7 @@ const LOCALES: Locale[] = ["en", "ar", "ur"];
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticPages = ["", "/courses", "/pricing", "/about", "/privacy", "/terms", "/refund-policy"];
+  const staticPages = ["", "/courses", "/pricing", "/about", "/register", "/privacy", "/terms", "/refund-policy"];
   const paths = [
     ...staticPages,
     ...courses.map((course) => `/courses/${course.slug}`),

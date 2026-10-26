@@ -33,6 +33,7 @@ export default function Header() {
     { label: tn("courses"), href: "/courses" },
     { label: tn("pricing"), href: "/pricing" },
     { label: tn("about"), href: "/about" },
+    { label: tn("register"), href: "/register" },
   ] as const;
 
   const isActive = (href: string) =>

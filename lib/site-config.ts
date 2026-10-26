@@ -32,9 +32,10 @@ export const siteConfig = {
   phoneDisplay: "+92 336 7004940",
 
   // Campus location — Google Maps link supplied by Ali 2026-10-24
-  // (Mana Ahamadani, Dera Ghazi Khan; pin 29.8039701, 70.6246536).
-  mapEmbedUrl: "https://www.google.com/maps?q=29.8039701,70.6246536&z=14&output=embed",
-  mapLinkUrl: "https://www.google.com/maps/search/?api=1&query=29.8039701,70.6246536",
+  // (Dera Ghazi Khan city; pin 30.0328, 70.6403 — changed from Mana
+  // Ahamadani 2026-10-26 at Ali's order).
+  mapEmbedUrl: "https://www.google.com/maps?q=30.0328,70.6403&z=13&output=embed",
+  mapLinkUrl: "https://www.google.com/maps/search/?api=1&query=30.0328,70.6403",
   email: "TODO_EMAIL_ADDRESS",
   hours: "TODO_OPENING_HOURS",
 

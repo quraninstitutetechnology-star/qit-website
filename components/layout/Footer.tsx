@@ -19,6 +19,7 @@ export default async function Footer() {
     { label: tn("courses"), href: "/courses" },
     { label: tn("pricing"), href: "/pricing" },
     { label: tn("about"), href: "/about" },
+    { label: tn("register"), href: "/register" },
   ] as const;
 
   return (

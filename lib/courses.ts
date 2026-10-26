@@ -362,6 +362,231 @@ export const courses: Course[] = [
       { q: "Can my child take this with Noorani Qaida?", a: "Yes, the two are commonly combined for children." },
     ],
   },
+
+  {
+    slug: "o-level",
+    title: "O Level",
+    shortTitle: "O Level",
+    audience: ["kids"],
+    audienceLabel: "School students preparing for Cambridge O Level exams",
+    level: "School — O Level",
+    format: "Online 1-to-1 · On-campus",
+    tagline: "Complete O Level preparation with a personal teacher for every subject.",
+    whoFor:
+      "School students in grades 9–11 preparing for Cambridge O Level examinations who want focused, one-to-one help beyond the classroom.",
+    outcomes: [
+      "Full syllabus coverage for your chosen O Level subjects",
+      "Past-paper practice with examiner-style feedback",
+      "Clear concepts instead of memorised answers",
+      "Regular tests and progress reports for parents",
+      "Exam technique: timing, marking schemes and common mistakes",
+      "Confidence to sit the exam fully prepared",
+    ],
+    howItWorks:
+      "Live 1-to-1 lessons matched to your school syllabus and exam board, with homework, chapter tests and past-paper sessions built into your routine.",
+    frequencyNote:
+      "Most O Level students study 3–6 classes per week — choose a plan on the Pricing page that fits your school routine.",
+    teacherNote:
+      "Taught by experienced school-subject teachers. Female teachers are available for girls.",
+    keywords: "O Level tuition online, Cambridge O Level classes, O Level tutor Pakistan",
+    questions: [
+      { q: "Which O Level subjects can I study?", a: "All major subjects — including Mathematics, English, Physics, Chemistry, Biology, Computer Science, Urdu, Islamiyat and Pakistan Studies. Tell us your subjects in the free trial class." },
+      { q: "Do you follow the Cambridge syllabus?", a: "Yes. Lessons follow the Cambridge O Level syllabus for your exam session, with past-paper practice throughout the course." },
+      { q: "Can parents see my progress?", a: "Yes. Parents receive regular progress updates and test results, just like our Quran courses." },
+    ],
+  },
+  {
+    slug: "a-level",
+    title: "A Level",
+    shortTitle: "A Level",
+    audience: ["kids", "adults"],
+    audienceLabel: "College students preparing for Cambridge A Level exams",
+    level: "School — A Level",
+    format: "Online 1-to-1 · On-campus",
+    tagline: "Advanced A Level teaching that turns hard topics into high grades.",
+    whoFor:
+      "AS and A2 students preparing for Cambridge A Level examinations who need deep concept clarity and serious exam practice, one-to-one.",
+    outcomes: [
+      "Complete AS and A2 syllabus coverage for your subjects",
+      "Deep understanding of advanced concepts, step by step",
+      "Structured past-paper training with model answers",
+      "Regular topic tests and progress reports",
+      "Exam strategy for structured and essay questions",
+      "Strong preparation for university entry",
+    ],
+    howItWorks:
+      "Live 1-to-1 lessons planned around your exam session, with topic-wise teaching, worked examples and timed past-paper practice.",
+    frequencyNote:
+      "Most A Level students study 3–6 classes per week — choose a plan on the Pricing page that fits your college routine.",
+    teacherNote:
+      "Taught by qualified subject specialists with A Level teaching experience. Female teachers are available for girls.",
+    keywords: "A Level tuition online, Cambridge A Level classes, A Level tutor Pakistan",
+    questions: [
+      { q: "Which A Level subjects do you cover?", a: "All major subjects — including Mathematics, Further Mathematics, Physics, Chemistry, Biology, Computer Science, Economics, Business and English. Confirm your subjects in the free trial class." },
+      { q: "I am struggling with one subject only. Can I join for just that?", a: "Yes. You can register for a single subject or several — the plan is built around what you need." },
+      { q: "Do you practise past papers?", a: "Yes — past-paper practice with marking-scheme feedback is a core part of every A Level course at QIT." },
+    ],
+  },
+  {
+    slug: "persian-language",
+    title: "Persian Language",
+    shortTitle: "Persian Language",
+    audience: ["kids", "adults"],
+    audienceLabel: "Anyone who wants to speak, read and write Persian (Farsi)",
+    level: "Beginner to Advanced",
+    format: "Online 1-to-1 · On-campus",
+    tagline: "Learn Persian step by step — speak, read and write Farsi with confidence.",
+    whoFor:
+      "Beginners and improvers of any age who want to learn Persian for study, work, travel, family or an interest in Persian literature and poetry.",
+    outcomes: [
+      "Read and write the Persian script fluently",
+      "Hold everyday conversations in Persian",
+      "Build a strong working vocabulary, topic by topic",
+      "Understand Persian grammar through simple, clear rules",
+      "Read short Persian texts, stories and poems",
+      "Speak with correct pronunciation from the start",
+    ],
+    howItWorks:
+      "Live 1-to-1 lessons at your pace: script and sounds first, then conversation, reading and writing in every class.",
+    frequencyNote:
+      "Most language students study 3–5 classes per week — choose a plan on the Pricing page that fits your routine.",
+    teacherNote:
+      "Taught by teachers fluent in Persian with experience teaching it as a foreign language. Female teachers are available for sisters.",
+    keywords: "Persian language course online, learn Farsi online, Persian classes Pakistan",
+    questions: [
+      { q: "I know no Persian at all. Can I start?", a: "Yes. The course starts from the script and basic sounds, so complete beginners are welcome." },
+      { q: "Is Persian similar to Urdu?", a: "Persian uses a script close to Urdu and shares much vocabulary, so Urdu speakers usually progress quickly — your teacher builds on what you already know." },
+      { q: "Will I learn to speak or only read?", a: "Both. Every lesson includes speaking practice alongside reading and writing." },
+    ],
+  },
+  {
+    slug: "urdu-language",
+    title: "Urdu Language",
+    shortTitle: "Urdu Language",
+    audience: ["kids", "adults"],
+    audienceLabel: "Kids and adults who want to read, write and speak Urdu beautifully",
+    level: "Beginner to Advanced",
+    format: "Online 1-to-1 · On-campus",
+    tagline: "Read, write and speak Urdu with confidence — at home or anywhere in the world.",
+    whoFor:
+      "Children and adults — especially Pakistani families living abroad — who want to learn or improve Urdu reading, writing and speaking.",
+    outcomes: [
+      "Read Urdu script fluently, letter by letter",
+      "Write correct Urdu with proper spelling",
+      "Speak Urdu confidently in daily conversation",
+      "Build rich Urdu vocabulary and sentence structure",
+      "Read Urdu stories, poems and newspapers",
+      "Understand Urdu grammar in a simple, practical way",
+    ],
+    howItWorks:
+      "Live 1-to-1 lessons starting from your level: Qaida-style script foundations for beginners, then reading, writing and conversation practice.",
+    frequencyNote:
+      "Most language students study 3–5 classes per week — choose a plan on the Pricing page that fits your routine.",
+    teacherNote:
+      "Taught by native Urdu teachers experienced with children and overseas learners. Female teachers are available for sisters and girls.",
+    keywords: "Urdu language course online, learn Urdu for kids, Urdu classes online",
+    questions: [
+      { q: "My child speaks Urdu but cannot read it. Is this course suitable?", a: "Yes — that is exactly who this course is for. We start from the script and build reading and writing step by step." },
+      { q: "We live outside Pakistan. Can we join?", a: "Yes. All classes are online 1-to-1 and timings are arranged around your country's time zone." },
+      { q: "Do adults join this course too?", a: "Yes. Adult learners follow the same structure at their own pace, with more focus on reading, writing and formal Urdu." },
+    ],
+  },
+  {
+    slug: "mathematics",
+    title: "Mathematics",
+    shortTitle: "Mathematics",
+    audience: ["kids", "adults"],
+    audienceLabel: "School and college students who want strong, stress-free Maths",
+    level: "School & College",
+    format: "Online 1-to-1 · On-campus",
+    tagline: "Maths made simple — concepts first, then practice until it clicks.",
+    whoFor:
+      "School and college students (including O Level and A Level) who want to understand Mathematics deeply, improve grades and stop fearing exams.",
+    outcomes: [
+      "Clear understanding of every topic, from basics to advanced",
+      "Fast, accurate problem-solving methods",
+      "Regular practice questions and chapter tests",
+      "Full exam preparation with past papers",
+      "Progress reports so parents can follow improvement",
+      "Confidence in class, in tests and in the exam hall",
+    ],
+    howItWorks:
+      "Live 1-to-1 lessons: your teacher explains each concept with worked examples, then guides your practice and corrects mistakes on the spot.",
+    frequencyNote:
+      "Most Maths students study 3–6 classes per week — choose a plan on the Pricing page that fits your routine.",
+    teacherNote:
+      "Taught by experienced Mathematics teachers for school and college levels. Female teachers are available for girls and sisters.",
+    keywords: "Maths tuition online, Mathematics classes online, Maths tutor Pakistan",
+    questions: [
+      { q: "Which classes/levels do you teach?", a: "School classes through O Level and A Level Mathematics, including Additional/Further Maths topics on request." },
+      { q: "My basics are weak. Can you still help?", a: "Yes. Your teacher first finds and fixes the weak basics, then moves forward — that is the advantage of 1-to-1 teaching." },
+      { q: "Do you give homework and tests?", a: "Yes. Regular practice and chapter tests are part of the course, with results shared in progress reports." },
+    ],
+  },
+  {
+    slug: "english",
+    title: "English",
+    shortTitle: "English",
+    audience: ["kids", "adults"],
+    audienceLabel: "Students and adults who want fluent, correct English",
+    level: "Beginner to Advanced",
+    format: "Online 1-to-1 · On-campus",
+    tagline: "Speak and write English fluently — grammar, vocabulary and confidence.",
+    whoFor:
+      "School and college students who want better English grades, and adults who want fluent spoken and written English for study, work and daily life.",
+    outcomes: [
+      "Speak English fluently and without hesitation",
+      "Correct grammar in speaking and writing",
+      "A rich, practical vocabulary for daily and academic use",
+      "Strong reading comprehension skills",
+      "Essay, letter and paragraph writing for exams",
+      "Clear pronunciation and listening skills",
+    ],
+    howItWorks:
+      "Live 1-to-1 lessons mixing conversation practice, grammar, reading and writing — every class includes real speaking time with your teacher.",
+    frequencyNote:
+      "Most English students study 3–5 classes per week — choose a plan on the Pricing page that fits your routine.",
+    teacherNote:
+      "Taught by experienced English teachers for school, college and adult learners. Female teachers are available for sisters and girls.",
+    keywords: "English language course online, spoken English classes, English tuition Pakistan",
+    questions: [
+      { q: "I can understand English but cannot speak it. Will this help?", a: "Yes. The course gives you guided speaking practice in every lesson, which is the fastest way to turn understanding into fluency." },
+      { q: "Do you also prepare students for school exams?", a: "Yes — grammar, comprehension and essay writing are taught according to your class and board, including O and A Level English." },
+      { q: "Is this course for adults too?", a: "Yes. Adults follow a practical programme focused on speaking, workplace communication and writing." },
+    ],
+  },
+  {
+    slug: "science",
+    title: "Science",
+    shortTitle: "Science",
+    audience: ["kids"],
+    audienceLabel: "School students learning Physics, Chemistry and Biology",
+    level: "School — up to O/A Level",
+    format: "Online 1-to-1 · On-campus",
+    tagline: "Physics, Chemistry and Biology explained clearly, concept by concept.",
+    whoFor:
+      "School students (including O Level and A Level) who want clear concepts, better grades and complete exam preparation in the science subjects.",
+    outcomes: [
+      "Clear concepts in Physics, Chemistry and Biology",
+      "Diagrams, definitions and key terms learned properly",
+      "Numerical practice for Physics and Chemistry",
+      "Chapter tests and regular revision",
+      "Past-paper practice with marking-scheme feedback",
+      "Progress reports for parents after every stage",
+    ],
+    howItWorks:
+      "Live 1-to-1 lessons with visual explanations, worked examples and quick questions in every class to make sure each concept is truly understood.",
+    frequencyNote:
+      "Most Science students study 3–6 classes per week — choose a plan on the Pricing page that fits your school routine.",
+    teacherNote:
+      "Taught by experienced science teachers for school and O/A Level. Female teachers are available for girls.",
+    keywords: "Science tuition online, Physics Chemistry Biology classes, Science tutor Pakistan",
+    questions: [
+      { q: "Can I study only one science subject?", a: "Yes. Join for Physics, Chemistry or Biology alone, or study all three — the plan follows your needs." },
+      { q: "Do you cover practical (ATP) papers?", a: "Yes. Alternative-to-Practical and practical-based questions are practised with past papers at O and A Level." },
+      { q: "How do parents follow progress?", a: "Through regular progress reports and test results, the same as all QIT courses." },
+    ],
+  },
 ];
 
 export function getCourse(slug: string): Course | undefined {

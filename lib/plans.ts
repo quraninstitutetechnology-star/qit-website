@@ -20,8 +20,10 @@ export interface Plan {
   minutesPerClass: number;
   classesPerMonth: number;
   popular?: boolean;
-  /** Monthly price per currency, formatted (set by Ali 2026-10-24 — "normal pricing in rupees and dollars"). */
-  prices: Record<CurrencyCode, string>;
+  /** Monthly price per currency with discount display (Ali 2026-10-26:
+      "was" shows struck-through, "now" is the charged price). USD ladder
+      30→22 · 60→44 · 90→66 set by Ali; PKR/GBP mirror the same pattern. */
+  prices: Record<CurrencyCode, { was: string; now: string }>;
   features: string[];
 }
 
@@ -32,7 +34,7 @@ export const plans: Plan[] = [
     classesPerWeek: 3,
     minutesPerClass: 30,
     classesPerMonth: 12,
-    prices: { PKR: "3,000", USD: "30", GBP: "25" },
+    prices: { PKR: { was: "10,000", now: "8,000" }, USD: { was: "30", now: "22" }, GBP: { was: "25", now: "18" } },
     features: [
       "3 classes per week (12 / month)",
       "30 minutes per class",
@@ -47,7 +49,7 @@ export const plans: Plan[] = [
     minutesPerClass: 30,
     classesPerMonth: 20,
     popular: true,
-    prices: { PKR: "5,000", USD: "50", GBP: "40" },
+    prices: { PKR: { was: "20,000", now: "16,000" }, USD: { was: "60", now: "44" }, GBP: { was: "50", now: "37" } },
     features: [
       "5 classes per week (20 / month)",
       "30 minutes per class",
@@ -62,7 +64,7 @@ export const plans: Plan[] = [
     classesPerWeek: 5,
     minutesPerClass: 45,
     classesPerMonth: 20,
-    prices: { PKR: "7,500", USD: "75", GBP: "60" },
+    prices: { PKR: { was: "25,000", now: "20,000" }, USD: { was: "90", now: "66" }, GBP: { was: "75", now: "55" } },
     features: [
       "5 classes per week (20 / month)",
       "45 minutes per class — longer lessons",
