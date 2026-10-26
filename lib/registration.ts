@@ -5,28 +5,6 @@
  * options combine the live course titles with the extra courses below
  * (labels localized via the `register.extras` message keys).
  */
-export const extraCourseKeys = [
-  "oLevel",
-  "aLevel",
-  "arabic",
-  "persian",
-  "urdu",
-  "maths",
-  "english",
-  "science",
-] as const;
-
-export const extraCourseValues: Record<(typeof extraCourseKeys)[number], string> = {
-  oLevel: "O Level",
-  aLevel: "A Level",
-  arabic: "Arabic Language Course",
-  persian: "Persian Language Course",
-  urdu: "Urdu Language Course",
-  maths: "Mathematics",
-  english: "English",
-  science: "Science",
-};
-
 /** Teacher experience dropdown (Ali: 1–5, last one "more than 5+"). */
 export const experienceOptions = [
   "1 year",

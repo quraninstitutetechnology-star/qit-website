@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { pageMetadata } from "@/lib/seo";
 import { getCourses } from "@/lib/locales";
 import type { Locale } from "@/i18n/routing";
-import { extraCourseKeys, extraCourseValues } from "@/lib/registration";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import RegistrationForms from "@/components/register/RegistrationForms";
 
@@ -38,13 +37,13 @@ export default async function RegisterPage({
   const t = await getTranslations("register");
   const tb = await getTranslations("breadcrumb");
 
-  const courseOptions = [
-    ...getCourses(loc).map((c) => ({ value: c.title, label: c.title })),
-    ...extraCourseKeys.map((k) => ({
-      value: extraCourseValues[k],
-      label: t(`extras.${k}`),
-    })),
-  ];
+  // All 18 courses — the former "extra" subjects (O/A Level, Persian,
+  // Urdu, Maths, English, Science) are real courses now, so the dropdown
+  // comes straight from the course catalogue (unique titles = unique keys).
+  const courseOptions = getCourses(loc).map((c) => ({
+    value: c.title,
+    label: c.title,
+  }));
 
   return (
     <>
