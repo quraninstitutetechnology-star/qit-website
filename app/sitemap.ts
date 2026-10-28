@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/site-config";
 import { courses } from "@/lib/courses";
 import { localizedUrl } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
@@ -12,7 +11,7 @@ const LOCALES: Locale[] = ["en", "ar", "ur"];
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticPages = ["", "/courses", "/pricing", "/about", "/register", "/privacy", "/terms", "/refund-policy"];
+  const staticPages = ["", "/courses", "/pricing", "/about", "/register", "/gallery", "/privacy", "/terms", "/refund-policy"];
   const paths = [
     ...staticPages,
     ...courses.map((course) => `/courses/${course.slug}`),

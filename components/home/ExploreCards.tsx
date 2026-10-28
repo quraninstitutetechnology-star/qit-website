@@ -5,14 +5,16 @@ import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 
 /**
- * Two navigation cards (Courses / Pricing) — added 2026-10-24 at Ali's
- * request, replacing the home-page course preview grid: visitors tap a
- * card to open the full Courses or Pricing page. Photos approved by Ali
- * 2026-10-24 (book-shelf photo / three plan cards photo).
+ * Navigation cards (Courses / Pricing, plus Gallery / Register added
+ * 2026-10-28 at Ali's order) — visitors tap a card to open the full page.
+ * Photos: book-shelf / plan cards approved by Ali 2026-10-24; gallery
+ * photo-wall and registration-form photos generated 2026-10-28.
  */
 const cardAssets = [
   { href: "/courses", variant: "green" as const, img: "/images/explore/courses-books.jpg" },
   { href: "/pricing", variant: "gold" as const, img: "/images/explore/pricing-plans.jpg" },
+  { href: "/gallery", variant: "green" as const, img: "/images/explore/gallery-photos.jpg" },
+  { href: "/register", variant: "gold" as const, img: "/images/explore/register-form.jpg" },
 ];
 
 interface CardText {

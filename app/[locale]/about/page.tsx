@@ -12,6 +12,8 @@ import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import CampusMap from "@/components/ui/CampusMap";
 import TrialForm from "@/components/forms/TrialForm";
+import HowItWorks from "@/components/home/HowItWorks";
+import AudienceCards from "@/components/home/AudienceCards";
 import { siteConfig } from "@/lib/site-config";
 import { images } from "@/lib/images";
 import { whatsappLink, getWhatsappMessages } from "@/lib/whatsapp";
@@ -119,6 +121,15 @@ export default async function AboutPage({
       {/* Teachers section removed 2026-10-24 at Ali's order (placeholder
           profiles). Teacher data still lives in lib/teachers.ts +
           lib/locales if Ali wants the section back with real profiles. */}
+
+      {/* How It Works — moved here from the home page 2026-10-28 at Ali's
+          order; sits right before the campus + trial-form sections it
+          points to. */}
+      <HowItWorks />
+
+      {/* Who We Teach — moved here from the home page 2026-10-28 at
+          Ali's order. */}
+      <AudienceCards />
 
       {/* Campus */}
       <Section id="campus" title={t("campusTitle")}>

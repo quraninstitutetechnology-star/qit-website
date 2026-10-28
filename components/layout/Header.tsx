@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, type Locale } from "@/i18n/routing";
 import { whatsappLink, getWhatsappMessages } from "@/lib/whatsapp";
@@ -34,6 +35,7 @@ export default function Header() {
     { label: tn("pricing"), href: "/pricing" },
     { label: tn("about"), href: "/about" },
     { label: tn("register"), href: "/register" },
+    { label: tn("gallery"), href: "/gallery" },
   ] as const;
 
   const isActive = (href: string) =>
@@ -50,18 +52,18 @@ export default function Header() {
           scrolled ? "h-14" : "h-20"
         }`}
       >
-        <Link href="/" className="flex items-center gap-2.5" aria-label={t("homeAria")}>
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-green text-sm font-bold text-gold shadow-card sm:h-11 sm:w-11 sm:text-base">
-            QIT
-          </span>
-          <span className="hidden leading-tight min-[480px]:block">
-            <span className="block text-[15px] font-bold text-brand-dark sm:text-base">
-              {tc("fullName")}
-            </span>
-            <span className="block text-[11px] font-medium italic text-gold-dark sm:text-xs">
-              {tc("slogan")}
-            </span>
-          </span>
+        <Link href="/" className="flex items-center" aria-label={t("homeAria")}>
+          {/* Enhanced QIT logo (Ali's own logo, quality-enhanced and put in
+              the header at his order 2026-10-27 — replaces the old badge +
+              name/slogan text lockup). */}
+          <Image
+            src="/images/logo-qit.png"
+            alt={tc("fullName")}
+            width={900}
+            height={367}
+            priority
+            className={`w-auto transition-all duration-300 ${scrolled ? "h-9 sm:h-10" : "h-11 sm:h-12"}`}
+          />
         </Link>
 
         <nav aria-label={tn("main")} className="hidden items-center gap-7 lg:flex">

@@ -5,10 +5,8 @@ import { getFaqs } from "@/lib/locales";
 import type { Locale } from "@/i18n/routing";
 import JsonLd from "@/components/ui/JsonLd";
 import HeroVideo from "@/components/home/HeroVideo";
-import HowItWorks from "@/components/home/HowItWorks";
 import ExploreCards from "@/components/home/ExploreCards";
-import WhyQit from "@/components/home/WhyQit";
-import AudienceCards from "@/components/home/AudienceCards";
+import FounderSection from "@/components/home/FounderSection";
 import CampusHighlight from "@/components/home/CampusHighlight";
 import FaqSection from "@/components/home/FaqSection";
 import CtaBand from "@/components/home/CtaBand";
@@ -54,15 +52,20 @@ export default async function HomePage({
       <JsonLd data={localBusinessJsonLd()} />
       {/* Hero carousel replaced by the approved 10s hero video 2026-10-24. */}
       <HeroVideo />
+      {/* Founder & Director — directly after the hero (moved here
+          2026-10-28 at Ali's order; originally after Why QIT). */}
+      <FounderSection />
       {/* Stats strip (Students/Teachers/Countries/Years) removed 2026-10-24 at Ali's request. */}
-      <HowItWorks />
+      {/* How It Works moved to the About page 2026-10-28 at Ali's order. */}
       {/* Stats band was here briefly on 2026-10-24; Ali moved it to the
           About page the same day. */}
       {/* Course preview grid replaced by two navigation cards (Courses /
           Pricing) 2026-10-24 at Ali's request. */}
       <ExploreCards />
-      <WhyQit />
-      <AudienceCards />
+      {/* "Why QIT / Why Families Choose QIT" section deleted 2026-10-28 at
+          Ali's order (component file kept in the tree, unused). */}
+      {/* "Who We Teach" (AudienceCards) moved to the About page
+          2026-10-28 at Ali's order. */}
       {/* "Our Teachers" preview and Pricing preview sections removed
           2026-10-24 at Ali's request. */}
       {/* Testimonials section removed completely 2026-10-24 at Ali's request. */}
