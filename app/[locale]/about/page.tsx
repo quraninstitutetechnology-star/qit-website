@@ -148,7 +148,7 @@ export default async function AboutPage({
           </Reveal>
           <Reveal delay={0.1}>
             <ul className="space-y-3 text-ink/80">
-              <li className="flex gap-2"><span aria-hidden="true">📍</span> {t("addressLabel")}: {tc("addressDisplay")} ({siteConfig.address.street})</li>
+              <li className="flex gap-2"><span aria-hidden="true">📍</span> {t("addressLabel")}: {tc("addressDisplay")}</li>
               <li className="flex gap-2"><span aria-hidden="true">🕐</span> {t("hoursLabel")}: {siteConfig.hours}</li>
               <li className="flex gap-2"><span aria-hidden="true">🏫</span> {t("admissionLine")}</li>
             </ul>

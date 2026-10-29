@@ -21,9 +21,11 @@ export const siteConfig = {
   // §1 Decision 4 — free-trial wording (no number of classes stated).
   trialLabel: "Free Trial Class",
 
-  // §1 Decision 6 — only the city/region is known; everything else is a placeholder.
+  // §1 Decision 6 — only the city/region is known; no street address has
+  // been supplied, so street stays empty and pages show the city-level
+  // address only (the About page no longer appends it).
   address: {
-    street: "TODO_STREET_ADDRESS",
+    street: "",
     city: "Khanpur",
     region: "Dera Ghazi Khan, Punjab",
     country: "Pakistan",
@@ -36,8 +38,10 @@ export const siteConfig = {
   // Ahamadani 2026-10-26 at Ali's order).
   mapEmbedUrl: "https://www.google.com/maps?q=30.0328,70.6403&z=13&output=embed",
   mapLinkUrl: "https://www.google.com/maps/search/?api=1&query=30.0328,70.6403",
-  email: "TODO_EMAIL_ADDRESS",
-  hours: "TODO_OPENING_HOURS",
+  // Contact email + hours — supplied by Ali 2026-10-29: the academy's
+  // Gmail, and the campus is open 24 hours.
+  email: "Sadazamir123@gmail.com",
+  hours: "Open 24 Hours",
 
   // Social links — placeholders until Ali supplies real profiles.
   socials: {
