@@ -46,16 +46,16 @@ export default function HeroVideo() {
             <source src="/videos/hero.mp4" type="video/mp4" />
           </video>
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 via-brand-dark/70 to-brand-dark/30 rtl:bg-gradient-to-l" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/55 via-brand-dark/25 to-transparent rtl:bg-gradient-to-l" />
         <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p lang="ar" dir="rtl" className="mb-4 text-left font-arabic text-xl text-gold-light sm:text-2xl">
+            <p lang="ar" dir="rtl" className="mb-4 text-left font-arabic text-lg text-gold-light drop-shadow sm:text-xl">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
-            <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[44px]">
+            <h1 className="text-2xl font-bold leading-snug text-white drop-shadow-lg sm:text-3xl lg:text-4xl">
               {t("headline")}
             </h1>
-            <p className="mt-4 max-w-xl text-base text-white/85 sm:text-lg">{t("sub")}</p>
+            <p className="mt-4 max-w-xl text-sm text-white/90 drop-shadow sm:text-base">{t("sub")}</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button href={whatsappLink(wa.home)} variant="gold" external>
                 {tc("bookTrial")}

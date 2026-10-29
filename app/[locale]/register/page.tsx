@@ -22,9 +22,10 @@ export async function generateMetadata({
 }
 
 /**
- * Registration page (added 2026-10-26 at Ali's order): two forms —
- * student registration and teacher application — each submitting a
- * neatly arranged application to the academy's WhatsApp.
+ * Registration page (added 2026-10-26 at Ali's order): three forms —
+ * student registration, teacher application, and madrasa registration
+ * under the Qoumi Markazi Digital Quran Board (added 2026-10-29) — each
+ * submitting a neatly arranged application to the academy's WhatsApp.
  */
 export default async function RegisterPage({
   params,

@@ -138,7 +138,8 @@ html[lang="ar"] * {
    Class strategy: a `dark` class on <html> (ThemeToggle + anti-flash
    script in the locale layout). The site's colour use is token-based, so
    dark mode is a theme layer over the recurring utilities: surfaces flip
-   to deep-green tones, ink text flips to warm cream, and brand green/gold
+   to deep-navy tones (Ali's Director Profile sample colour #0D2B54,
+   adopted site-wide 2026-10-29), ink text flips to warm cream, and brand green/gold
    accents get lightened variants — while elements sitting ON gold keep
    their dark text, and the always-dark surfaces (top bar, footer, hero
    overlays, badges) stay untouched. */
@@ -146,20 +147,20 @@ html[lang="ar"] * {
   color-scheme: dark;
 }
 .dark body {
-  background-color: #0a2921;
+  background-color: #0a1e3f;
   color: #ede9df;
 }
 .dark .bg-cream {
-  background-color: #0a2921;
+  background-color: #0a1e3f;
 }
 .dark .bg-cream\/95 {
-  background-color: rgba(10, 41, 33, 0.92);
+  background-color: rgba(10, 30, 63, 0.92);
 }
 .dark .bg-white {
-  background-color: #123b2f;
+  background-color: #122f5c;
 }
 .dark .bg-brand-light {
-  background-color: #0d2f26;
+  background-color: #0d2650;
 }
 .dark .bg-gold-light\/50 {
   background-color: rgba(217, 164, 65, 0.14);
@@ -187,7 +188,7 @@ html[lang="ar"] * {
 }
 .dark .bg-gold.text-brand-dark,
 .dark .bg-gold .text-brand-dark {
-  color: #073f32;
+  color: #0d2b54;
 }
 .dark .text-brand-green {
   color: #3dbe8b;
@@ -202,16 +203,16 @@ html[lang="ar"] * {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
 }
 .dark .divide-brand-green\/10 > :not([hidden]) ~ :not([hidden]) {
-  border-color: rgba(61, 190, 139, 0.18);
+  border-color: rgba(120, 170, 235, 0.18);
 }
 .dark .border-brand-green\/10 {
-  border-color: rgba(61, 190, 139, 0.18);
+  border-color: rgba(120, 170, 235, 0.18);
 }
 .dark .border-brand-green\/20 {
-  border-color: rgba(61, 190, 139, 0.28);
+  border-color: rgba(120, 170, 235, 0.28);
 }
 .dark .ring-brand-green\/15 {
-  --tw-ring-color: rgba(61, 190, 139, 0.25);
+  --tw-ring-color: rgba(120, 170, 235, 0.3);
 }
 
 /* ---------- Reduced motion: disable all decorative animation (spec §11) ---------- */

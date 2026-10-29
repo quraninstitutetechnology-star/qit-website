@@ -48,10 +48,13 @@ function buildMessage(heading: string, rows: [string, string][]): string {
 
 /**
  * Student + teacher registration forms (added 2026-10-26 at Ali's order).
- * On submit, the filled details are arranged into a headed WhatsApp
- * message and opened to the academy's number; a success panel confirms
- * and offers to re-open WhatsApp. Option values stay English (they are
- * read by the academy), matching the trial-form policy.
+ * Madrasa registration added 2026-10-29 at Ali's order: madrasas register
+ * under the Qoumi Markazi Digital Quran Board with the details a board
+ * registration needs (madrasa, mohtamim, location, students, teachers,
+ * programs, facility). On submit, the filled details are arranged into a
+ * headed WhatsApp message and opened to the academy's number; a success
+ * panel confirms and offers to re-open WhatsApp. Option values stay
+ * English (they are read by the academy), matching the trial-form policy.
  */
 export default function RegistrationForms({
   courseOptions,
@@ -59,11 +62,11 @@ export default function RegistrationForms({
   courseOptions: { value: string; label: string }[];
 }) {
   const t = useTranslations("register");
-  const [tab, setTab] = useState<"student" | "teacher">("student");
+  const [tab, setTab] = useState<"student" | "teacher" | "madrasa">("student");
   const [sentText, setSentText] = useState<string | null>(null);
 
   const submit =
-    (kind: "student" | "teacher") => (e: React.FormEvent<HTMLFormElement>) => {
+    (kind: "student" | "teacher" | "madrasa") => (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       const fd = new FormData(e.currentTarget);
       const get = (n: string) => String(fd.get(n) ?? "");
@@ -81,18 +84,38 @@ export default function RegistrationForms({
               ["Preferred Timing", get("timing")],
               ["Notes", get("notes")],
             ]
-          : [
-              ["Full Name", get("fullName")],
-              ["Phone", get("phone")],
-              ["Email", get("email")],
-              ["Teaching Experience", get("experience")],
-              ["Highest Degree / Qualification", get("degree")],
-              ["City", get("city")],
-              ["Major Field", get("majorField")],
-              ["Notes", get("notes")],
-            ];
+          : kind === "teacher"
+            ? [
+                ["Full Name", get("fullName")],
+                ["Phone", get("phone")],
+                ["Email", get("email")],
+                ["Teaching Experience", get("experience")],
+                ["Highest Degree / Qualification", get("degree")],
+                ["City", get("city")],
+                ["Major Field", get("majorField")],
+                ["Notes", get("notes")],
+              ]
+            : [
+                ["Madrasa Name", get("mName")],
+                ["Mohtamim / Head", get("mohtamim")],
+                ["Phone", get("phone")],
+                ["Email", get("email")],
+                ["Address", get("address")],
+                ["City / District", get("cityDistrict")],
+                ["Existing Registration No.", get("regNo")],
+                ["Year Established", get("established")],
+                ["Total Students", get("students")],
+                ["Total Teachers", get("teachers")],
+                ["Programs Offered", fd.getAll("programs").map(String).join(", ")],
+                ["Facility Type", get("facility")],
+                ["Notes", get("notes")],
+              ];
       const text = buildMessage(
-        kind === "student" ? "NEW STUDENT REGISTRATION" : "NEW TEACHER APPLICATION",
+        kind === "student"
+          ? "NEW STUDENT REGISTRATION"
+          : kind === "teacher"
+            ? "NEW TEACHER APPLICATION"
+            : "NEW MADRASA REGISTRATION — QOUMI MARKAZI DIGITAL QURAN BOARD",
         rows,
       );
       setSentText(text);
@@ -114,6 +137,9 @@ export default function RegistrationForms({
         </button>
         <button type="button" role="tab" aria-selected={tab === "teacher"} onClick={() => { setTab("teacher"); setSentText(null); }} className={tabCls(tab === "teacher")}>
           {t("teacherTab")}
+        </button>
+        <button type="button" role="tab" aria-selected={tab === "madrasa"} onClick={() => { setTab("madrasa"); setSentText(null); }} className={tabCls(tab === "madrasa")}>
+          {t("madrasaTab")}
         </button>
       </div>
 
@@ -189,7 +215,7 @@ export default function RegistrationForms({
             <p className="mt-2 text-center text-xs text-ink/50">* {t("required")}</p>
           </div>
         </form>
-      ) : (
+      ) : tab === "teacher" ? (
         <form onSubmit={submit("teacher")} className="grid gap-4 sm:grid-cols-2">
           <Field label={t("fullName")} required optionalText={t("optional")}>
             <input name="fullName" required className={inputCls} autoComplete="name" />
@@ -234,6 +260,81 @@ export default function RegistrationForms({
               ))}
             </select>
           </Field>
+          <div className="sm:col-span-2">
+            <Field label={t("notes")} optionalText={t("optional")}>
+              <textarea name="notes" rows={3} className={inputCls} />
+            </Field>
+          </div>
+          <div className="sm:col-span-2">
+            <button type="submit" className="btn-shine inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-gold px-6 py-3 text-base font-bold text-brand-dark shadow-goldglow transition-all duration-200 hover:-translate-y-0.5 hover:bg-gold-dark active:scale-[0.98] motion-reduce:transform-none">
+              {t("submit")}
+            </button>
+            <p className="mt-2 text-center text-xs text-ink/50">* {t("required")}</p>
+          </div>
+        </form>
+      ) : (
+        <form onSubmit={submit("madrasa")} className="grid gap-4 sm:grid-cols-2">
+          <div className="sm:col-span-2">
+            <p className="rounded-2xl bg-brand-light px-5 py-4 text-sm leading-relaxed text-ink/75">{t("mIntro")}</p>
+          </div>
+          <Field label={t("mName")} required optionalText={t("optional")}>
+            <input name="mName" required className={inputCls} />
+          </Field>
+          <Field label={t("mMohtamim")} required optionalText={t("optional")}>
+            <input name="mohtamim" required className={inputCls} autoComplete="name" />
+          </Field>
+          <Field label={t("phone")} required optionalText={t("optional")}>
+            <input name="phone" required type="tel" className={inputCls} autoComplete="tel" placeholder="+92 ..." />
+          </Field>
+          <Field label={t("email")} optionalText={t("optional")}>
+            <input name="email" type="email" className={inputCls} autoComplete="email" />
+          </Field>
+          <div className="sm:col-span-2">
+            <Field label={t("mAddress")} optionalText={t("optional")}>
+              <input name="address" className={inputCls} autoComplete="street-address" />
+            </Field>
+          </div>
+          <Field label={t("mCityDistrict")} required optionalText={t("optional")}>
+            <input name="cityDistrict" required className={inputCls} />
+          </Field>
+          <Field label={t("mRegNo")} optionalText={t("optional")}>
+            <input name="regNo" className={inputCls} />
+          </Field>
+          <Field label={t("mEstablished")} optionalText={t("optional")}>
+            <input name="established" inputMode="numeric" className={inputCls} placeholder="e.g. 2005" />
+          </Field>
+          <Field label={t("mFacility")} optionalText={t("optional")}>
+            <select name="facility" defaultValue="" className={inputCls}>
+              <option value="">— {t("selectOne")} —</option>
+              <option value="Day Scholars Only">{t("facDay")}</option>
+              <option value="Boarding (Residential)">{t("facBoarding")}</option>
+              <option value="Both Day & Boarding">{t("facBoth")}</option>
+            </select>
+          </Field>
+          <Field label={t("mStudents")} optionalText={t("optional")}>
+            <input name="students" inputMode="numeric" className={inputCls} />
+          </Field>
+          <Field label={t("mTeachers")} optionalText={t("optional")}>
+            <input name="teachers" inputMode="numeric" className={inputCls} />
+          </Field>
+          <div className="sm:col-span-2">
+            <Field label={t("mPrograms")} optionalText={t("optional")}>
+              <div className="flex flex-wrap gap-2 pt-1">
+                {[
+                  ["Hifz", t("progHifz")],
+                  ["Nazra", t("progNazra")],
+                  ["Tajweed", t("progTajweed")],
+                  ["Noorani Qaida", t("progQaida")],
+                  ["Dars-e-Nizami", t("progDars")],
+                ].map(([value, label]) => (
+                  <label key={value} className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-brand-green/20 bg-white px-4 py-2 text-sm text-ink shadow-sm">
+                    <input type="checkbox" name="programs" value={value} className="h-4 w-4 accent-[#D9A441]" />
+                    {label}
+                  </label>
+                ))}
+              </div>
+            </Field>
+          </div>
           <div className="sm:col-span-2">
             <Field label={t("notes")} optionalText={t("optional")}>
               <textarea name="notes" rows={3} className={inputCls} />
