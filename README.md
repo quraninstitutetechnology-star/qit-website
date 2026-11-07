@@ -61,7 +61,7 @@ replace any of them by dropping in a new file with the **same name**.
 |---|---|---|
 | `TODO_WHATSAPP_NUMBER` | `lib/site-config.ts` | Real WhatsApp number (`92XXXXXXXXXX`, no `+`) — one change updates every WhatsApp link on the site |
 | Prices `Rs —` / `$ —` / `£ —` | `lib/plans.ts` (`currencies[].placeholder`) | Real monthly fees per currency |
-| Domain `https://www.example.com` | `lib/site-config.ts` (`url`) | Real domain — updates canonicals, sitemap, OG and schema |
+| Domain `https://quraninstitutetechnology.com` | `lib/site-config.ts` (`url`) | Real domain — updates canonicals, sitemap, OG and schema |
 | `TODO_STREET_ADDRESS`, `TODO_PHONE_NUMBER`, `TODO_EMAIL_ADDRESS`, `TODO_OPENING_HOURS` | `lib/site-config.ts` | Real campus address, phone, email, hours |
 | `TODO_FACEBOOK_URL` / `TODO_INSTAGRAM_URL` / `TODO_YOUTUBE_URL` | `lib/site-config.ts` (`socials`) | Real social profiles |
 | 4 teacher placeholders | `lib/teachers.ts` + `public/images/avatar.jpg` | Real teacher names, qualifications, photos |

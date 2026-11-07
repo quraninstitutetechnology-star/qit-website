@@ -14,9 +14,20 @@ interface CourseOption {
   title: string;
 }
 
+const REQUIRED = [
+  "studentName",
+  "age",
+  "gender",
+  "course",
+  "country",
+  "whatsapp",
+  "preferredTimes",
+  "teacherPreference",
+] as const;
+
 /**
- * Free-trial / contact form (spec §8). Validates client + server, posts to
- * /api/contact, and on success shows a WhatsApp deep link with details prefilled.
+ * Free-trial / contact form (spec §8). Validates client-side and on success
+ * shows a WhatsApp deep link with details prefilled.
  * Never a dead stub. Labels are localized; option VALUES stay English so the
  * academy's WhatsApp enquiry stays readable. Course options arrive localized
  * from the (server) About page.
@@ -29,39 +40,47 @@ export default function TrialForm({ courseOptions }: { courseOptions: CourseOpti
   const t = useTranslations("form");
   const wa = getWhatsappMessages(locale);
 
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
-    setStatus("sending");
     setError("");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      const json = await res.json();
-      if (!res.ok || !json.ok) {
+
+    for (const field of REQUIRED) {
+      const value = data[field];
+      if (typeof value !== "string" || value.trim() === "") {
         setStatus("error");
-        setError(
-          json.errorCode === "INVALID_EMAIL"
-            ? t("errorEmail")
-            : json.errorCode === "MISSING_FIELD"
-              ? t("errorMissing")
-              : json.errorCode === "INVALID_BODY"
-                ? t("errorInvalid")
-                : t("errorGeneric"),
-        );
+        setError(t("errorMissing"));
         return;
       }
-      setWaUrl(json.whatsappUrl);
-      setStatus("done");
-      form.reset();
-    } catch {
-      setStatus("error");
-      setError(t("errorNetwork"));
     }
+
+    const email = typeof data.email === "string" ? data.email.trim() : "";
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus("error");
+      setError(t("errorEmail"));
+      return;
+    }
+
+    const courseTitle =
+      courseOptions.find((c) => c.slug === data.course)?.title ?? String(data.course);
+
+    const lines = [
+      "Assalamu Alaikum! New Free Trial Class request from the QIT website:",
+      `Student name: ${data.studentName}`,
+      `Age: ${data.age}`,
+      `Gender: ${data.gender}`,
+      `Course: ${courseTitle}`,
+      `Country / time zone: ${data.country}`,
+      `WhatsApp: ${data.whatsapp}`,
+      ...(email ? [`Email: ${email}`] : []),
+      `Preferred days/times: ${data.preferredTimes}`,
+      `Teacher preference: ${data.teacherPreference}`,
+    ];
+
+    setWaUrl(whatsappLink(lines.join("\n")));
+    setStatus("done");
+    form.reset();
   }
 
   if (status === "done") {

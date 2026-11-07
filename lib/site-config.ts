@@ -12,7 +12,7 @@ export const siteConfig = {
   slogan: "We Build The Quranic Nation",
 
   // §1 Decision 5 — domain placeholder until Ali supplies the real domain.
-  url: "https://www.example.com",
+  url: "https://quraninstitutetechnology.com",
 
   // §1 Decision 2 — WhatsApp number, international format without "+".
   // Real number supplied by Ali 2026-10-24: +92 336 7004940.

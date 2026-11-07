@@ -3,6 +3,8 @@ import { courses } from "@/lib/courses";
 import { localizedUrl } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
+export const dynamic = "force-static";
+
 const LOCALES: Locale[] = ["en", "ar", "ur"];
 
 /**

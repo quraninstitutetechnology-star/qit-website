@@ -42,12 +42,20 @@ export function pageMetadata({ title, description, path, locale }: PageSeoInput)
       description,
       url,
       locale: ogLocales[locale],
-      // Falls back to app/opengraph-image.tsx (1200×630, brand green/gold).
+      images: [
+        {
+          url: `${siteConfig.url}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: `QIT — ${siteConfig.fullName}`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [`${siteConfig.url}/og-image.png`],
     },
   };
 }

@@ -66,8 +66,19 @@ export async function generateMetadata({
       type: "website",
       siteName: `QIT — ${tc("fullName")}`,
       locale: locale === "ar" ? "ar_EG" : locale === "ur" ? "ur_PK" : "en_US",
+      images: [
+        {
+          url: `${siteConfig.url}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: `QIT — ${tc("fullName")}`,
+        },
+      ],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: {
+      card: "summary_large_image",
+      images: [`${siteConfig.url}/og-image.png`],
+    },
   };
 }
 

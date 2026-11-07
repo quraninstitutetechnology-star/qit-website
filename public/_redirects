@@ -1,0 +1,3 @@
+# Cloudflare Pages 301 redirects for default locale (English has clean prefix-free URLs)
+/en/*  /:splat  301
+/en    /        301
