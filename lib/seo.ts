@@ -68,6 +68,10 @@ export function organizationJsonLd() {
     name: `${siteConfig.shortName} — ${siteConfig.fullName}`,
     slogan: siteConfig.slogan,
     url: siteConfig.url,
+    logo: `${siteConfig.url}/images/logo-qit.png`,
+    image: `${siteConfig.url}/og-image.png`,
+    telephone: siteConfig.phoneDisplay,
+    email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.address.city,
@@ -85,6 +89,15 @@ export function localBusinessJsonLd() {
     name: `${siteConfig.shortName} — ${siteConfig.fullName}`,
     slogan: siteConfig.slogan,
     url: siteConfig.url,
+    image: `${siteConfig.url}/og-image.png`,
+    telephone: siteConfig.phoneDisplay,
+    email: siteConfig.email,
+    hasMap: siteConfig.mapLinkUrl,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 30.0328,
+      longitude: 70.6403,
+    },
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.address.city,
