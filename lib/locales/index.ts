@@ -40,33 +40,33 @@ const byLocale: Record<Locale, LocaleData> = {
 };
 
 export function getCourses(locale: Locale): Course[] {
-  return byLocale[locale].courses;
+  return (byLocale[locale] ?? byLocale.en).courses;
 }
 
 export function getCourse(locale: Locale, slug: string): Course | undefined {
-  return byLocale[locale].courses.find((c) => c.slug === slug);
+  return (byLocale[locale] ?? byLocale.en).courses.find((c) => c.slug === slug);
 }
 
 export function getFaqs(locale: Locale): Faq[] {
-  return byLocale[locale].faqs;
+  return (byLocale[locale] ?? byLocale.en).faqs;
 }
 
 export function getPlans(locale: Locale): Plan[] {
-  return byLocale[locale].plans;
+  return (byLocale[locale] ?? byLocale.en).plans;
 }
 
 export function getComparisonRows(locale: Locale) {
-  return byLocale[locale].comparisonRows;
+  return (byLocale[locale] ?? byLocale.en).comparisonRows;
 }
 
 export function getBillingNotes(locale: Locale): string[] {
-  return byLocale[locale].billingNotes;
+  return (byLocale[locale] ?? byLocale.en).billingNotes;
 }
 
 export function getCurrencies(locale: Locale): Currency[] {
-  return byLocale[locale].currencies;
+  return (byLocale[locale] ?? byLocale.en).currencies;
 }
 
 export function getTeachers(locale: Locale): Teacher[] {
-  return byLocale[locale].teachers;
+  return (byLocale[locale] ?? byLocale.en).teachers;
 }
