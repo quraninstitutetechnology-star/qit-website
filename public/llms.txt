@@ -1,0 +1,41 @@
+# Quran Information Technology (QIT)
+
+> Quran Information Technology (QIT) is an online and on-campus Quran and academic academy based in Khanpur, Dera Ghazi Khan, Pakistan. QIT provides 1-to-1 live interactive classes worldwide in Quranic studies, Tajweed, Islamic education, and school academics for kids, adults, and sisters.
+
+## Academy Overview
+- **Name**: Quran Information Technology (QIT)
+- **Tagline**: We Build The Quranic Nation
+- **Website**: https://quraninstitutetechnology.com
+- **Physical Campus**: Khanpur, Dera Ghazi Khan, Punjab, Pakistan
+- **Formats**: 1-to-1 Live Online Classes (Global) & On-Campus Classes
+- **Contact Phone / WhatsApp**: +92 336 7004940 (WhatsApp: 923367004940)
+- **Email**: Sadazamir123@gmail.com
+- **Operating Hours**: Open 24 Hours
+- **Special Features**: Free Trial Class, Female Teachers available for sisters and girls, Flexible timings, Monthly progress reports, Multilingual support (English, Arabic, Urdu).
+
+## Core Pages
+- [Home](https://quraninstitutetechnology.com/): Official homepage with full course overview, curriculum highlights, teacher credentials, and trial booking.
+- [Courses](https://quraninstitutetechnology.com/courses/): Complete directory of all Quranic and academic courses.
+- [Pricing & Plans](https://quraninstitutetechnology.com/pricing/): Flexible fee plans supporting multiple currencies (PKR, USD, GBP, EUR, AED, SAR) from 2 to 6 classes per week.
+- [About Us](https://quraninstitutetechnology.com/about/): Background, educational philosophy, campus location, and mission.
+- [Book Free Trial](https://quraninstitutetechnology.com/register/): Online registration form for scheduling a free 1-to-1 trial class.
+- [Campus Gallery](https://quraninstitutetechnology.com/gallery/): Real photographs and video tours of the physical campus and classrooms.
+
+## Quranic Courses
+- [Noorani Qaida](https://quraninstitutetechnology.com/courses/noorani-qaida/): Foundational Arabic alphabet and articulation (Makharij) for young children (4+) and beginners starting from zero.
+- [Nazra Quran Reading](https://quraninstitutetechnology.com/courses/nazra-quran/): Fluent, cover-to-cover reading of the complete Mushaf with proper pronunciation and flow.
+- [Quran with Tajweed](https://quraninstitutetechnology.com/courses/tajweed/): Detailed rules of Tajweed, Makharij precision, Sifaat, Noon/Meem Sakinah, and Madd for beautiful recitation.
+- [Hifz — Quran Memorisation](https://quraninstitutetechnology.com/courses/hifz/): Structured memorisation of the Holy Quran with individual revision plans and retention tracking.
+- [Ijazah Program](https://quraninstitutetechnology.com/courses/ijazah/): Formal certification with continuous Sanad (chain of transmission) connecting back to Prophet Muhammad (ﷺ).
+- [Tafsir & Translation](https://quraninstitutetechnology.com/courses/tafsir/): Verse-by-verse translation, context of revelation (Asbab al-Nuzul), and practical daily life application.
+- [Arabic Language](https://quraninstitutetechnology.com/courses/arabic-language/): Classical Quranic and Modern Standard Arabic grammar (Nahw & Sarf), vocabulary, and conversational skills.
+- [Islamic Studies](https://quraninstitutetechnology.com/courses/islamic-studies/): Aqeedah, Fiqh, Seerah of the Prophet (ﷺ), daily Adhkar, Sunnah manners, and Islamic character.
+
+## Academic Courses
+- [Mathematics](https://quraninstitutetechnology.com/courses/mathematics/): School, college, O Level and A Level mathematics concept mastery, problem-solving, and exam preparation.
+- [English Language](https://quraninstitutetechnology.com/courses/english/): Spoken English fluency, grammar, comprehension, and essay writing for students and professionals.
+- [Science](https://quraninstitutetechnology.com/courses/science/): Physics, Chemistry, and Biology tutoring with worked examples and exam past paper practice.
+
+## Multi-Language URLs
+- [Arabic Version (العربية)](https://quraninstitutetechnology.com/ar/): Complete Arabic localized version.
+- [Urdu Version (اردو)](https://quraninstitutetechnology.com/ur/): Complete Urdu localized version.
