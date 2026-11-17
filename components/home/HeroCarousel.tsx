@@ -42,7 +42,7 @@ const slides: Slide[] = [
   {
     image: images.hero3,
     headline: "From Noorani Qaida to Hifz & Tajweed — a course for every age and level",
-    sub: "A clear pathway from the Arabic alphabet to Ijazah, online and at our Khanpur campus.",
+    sub: "A clear pathway from the Arabic alphabet to Hifz & Tafsir, online and at our Khanpur campus.",
     primary: { label: "Explore Courses", href: "/courses" },
     secondary: { label: "See Pricing", href: "/pricing" },
   },

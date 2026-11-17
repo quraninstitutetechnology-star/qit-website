@@ -71,7 +71,7 @@ export const plans: Plan[] = [
       "Private 1-to-1 teacher",
       "Monthly progress report",
       "Flexible rescheduling*", // TODO_CONFIRM
-      "Ideal for Hifz, Ijazah & Tafsir",
+      "Ideal for Hifz & Tafsir",
     ],
   },
 ];

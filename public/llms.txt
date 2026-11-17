@@ -26,7 +26,6 @@
 - [Nazra Quran Reading](https://quraninstitutetechnology.com/courses/nazra-quran/): Fluent, cover-to-cover reading of the complete Mushaf with proper pronunciation and flow.
 - [Quran with Tajweed](https://quraninstitutetechnology.com/courses/tajweed/): Detailed rules of Tajweed, Makharij precision, Sifaat, Noon/Meem Sakinah, and Madd for beautiful recitation.
 - [Hifz — Quran Memorisation](https://quraninstitutetechnology.com/courses/hifz/): Structured memorisation of the Holy Quran with individual revision plans and retention tracking.
-- [Ijazah Program](https://quraninstitutetechnology.com/courses/ijazah/): Formal certification with continuous Sanad (chain of transmission) connecting back to Prophet Muhammad (ﷺ).
 - [Tafsir & Translation](https://quraninstitutetechnology.com/courses/tafsir/): Verse-by-verse translation, context of revelation (Asbab al-Nuzul), and practical daily life application.
 - [Arabic Language](https://quraninstitutetechnology.com/courses/arabic-language/): Classical Quranic and Modern Standard Arabic grammar (Nahw & Sarf), vocabulary, and conversational skills.
 - [Islamic Studies](https://quraninstitutetechnology.com/courses/islamic-studies/): Aqeedah, Fiqh, Seerah of the Prophet (ﷺ), daily Adhkar, Sunnah manners, and Islamic character.

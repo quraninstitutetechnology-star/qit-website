@@ -182,36 +182,6 @@ export const courses: Course[] = [
     ],
   },
   {
-    slug: "ijazah",
-    title: "Ijazah",
-    shortTitle: "Ijazah",
-    audience: ["adults", "sisters"],
-    audienceLabel: "Advanced students — entry by assessment",
-    level: "Advanced",
-    format: "Online 1-to-1 · On-campus",
-    tagline: "Earn an Ijazah with sanad in Hafs 'an 'Asim and become authorised to teach.",
-    whoFor:
-      "Advanced reciters and Huffaz who want a formal Ijazah — certification with an unbroken chain (sanad) — in the narration of Hafs 'an 'Asim.",
-    outcomes: [
-      "Recite the entire Quran to a qualified teacher from memory or by reading, to the teacher's standard",
-      "Perfect advanced Tajweed in preparation for certification",
-      "Receive an Ijazah certificate with sanad on successful completion",
-      "Become qualified to teach others",
-    ],
-    howItWorks:
-      "Entry is by assessment, not by booking alone. You recite to a qualified teacher in 1-to-1 sessions until the required standard is reached.",
-    frequencyNote:
-      "There is no fixed duration — it depends on how many sessions you take each week and how long it takes to reach your tutor's standard.",
-    teacherNote:
-      "Ijazah is granted only by teachers who themselves hold Ijazah with sanad.",
-    keywords: "Ijazah program online, Quran Ijazah with sanad, Ijazah course",
-    questions: [
-      { q: "What is Ijazah?", a: "Ijazah is a formal authorisation to teach the Quran, given after you recite the whole Quran to a qualified teacher to a high standard. The certificate carries the chain of teachers (sanad) back through generations." },
-      { q: "Can anyone enrol directly?", a: "Entry is by assessment. Book a free trial class and your recitation will be assessed to confirm you are ready." },
-      { q: "How long does Ijazah take?", a: "It varies by student — it depends on your weekly sessions and how quickly you reach the tutor's standard. No fixed timeline is promised." },
-    ],
-  },
-  {
     slug: "tafsir",
     title: "Tafsir",
     shortTitle: "Tafsir",

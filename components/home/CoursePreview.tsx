@@ -11,7 +11,7 @@ export default function CoursePreview() {
       tone="white"
       eyebrow="Our courses"
       title="A Course for Every Age and Level"
-      intro="From the very first letter of Noorani Qaida to Ijazah — follow one clear pathway, at your own pace."
+      intro="From the very first letter of Noorani Qaida to Hifz and Tafsir — follow one clear pathway, at your own pace."
     >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {courses.slice(0, 6).map((course, i) => (
