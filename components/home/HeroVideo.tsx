@@ -47,7 +47,19 @@ export default function HeroVideo() {
           </video>
         )}
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/55 via-brand-dark/25 to-transparent rtl:bg-gradient-to-l" />
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-4 sm:px-6 lg:px-8">
+        {/* Digital Quran Board — main name board fixed ON TOP of the hero
+            (Ali's order 2026-11-21, revised same day: overlay at the hero's
+            top, shorter height, not a strip above pushing the hero down).
+            Pure CSS styling lives in globals.css (.dqb-*); the name stays
+            English in every locale, like a proper brand name. */}
+        <div className="dqb-board">
+          <div className="dqb-frame">
+            <p dir="ltr" className="dqb-title">
+              Digital Quran Board
+            </p>
+          </div>
+        </div>
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-4 pt-16 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p lang="ar" dir="rtl" className="mb-4 text-left font-arabic text-lg text-gold-light drop-shadow sm:text-xl">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
