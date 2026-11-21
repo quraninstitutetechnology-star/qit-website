@@ -128,6 +128,8 @@ export default function RegistrationForms({
           ["Total Courses Count", allPrograms.length > 0 ? String(allPrograms.length) : ""],
           ["Courses Taught", allPrograms.join(", ")],
           ["Facility Type", get("facility")],
+          ["Building Ownership", get("building")],
+          ["Madrasa Area", get("area")],
           ["Notes", get("notes")],
         ];
       }
@@ -440,6 +442,25 @@ export default function RegistrationForms({
               </select>
             </Field>
           </div>
+
+          <Field label={t("mBuilding")} optionalText={t("optional")}>
+            <select name="building" defaultValue="" className={inputCls}>
+              <option value="">— {t("selectOne")} —</option>
+              <option value="Owner">{t("bOwner")}</option>
+              <option value="On Rental">{t("bRental")}</option>
+            </select>
+          </Field>
+          <Field label={t("mArea")} optionalText={t("optional")}>
+            <select name="area" defaultValue="" className={inputCls}>
+              <option value="">— {t("selectOne")} —</option>
+              {Array.from({ length: 18 }, (_, i) => i + 3).map((n) => (
+                <option key={n} value={`${n} Marla`}>
+                  {n} {t("mMarla")}
+                </option>
+              ))}
+              <option value="20+ Marla">20+ {t("mMarla")}</option>
+            </select>
+          </Field>
 
           {/* Courses Taught Section with Dynamic Add Course */}
           <div className="sm:col-span-2">

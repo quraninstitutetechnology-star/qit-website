@@ -18,7 +18,7 @@ export default function PlanCard({ plan, currency }: { plan: Plan; currency: Cur
 
   return (
     <div
-      className={`relative flex h-full flex-col rounded-2xl border-2 bg-white p-7 shadow-card transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lift motion-reduce:transform-none ${
+      className={`relative flex h-full flex-col rounded-2xl border-2 bg-white p-4 shadow-card sm:p-7 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lift motion-reduce:transform-none ${
         plan.popular ? "border-gold" : "border-transparent hover:border-gold"
       }`}
     >
@@ -30,7 +30,7 @@ export default function PlanCard({ plan, currency }: { plan: Plan; currency: Cur
       <h3 className="text-center text-xl font-bold text-brand-dark">{plan.name}</h3>
       <p className="mt-4 text-center">
         <span className="text-lg font-semibold text-ink/40 line-through">{currency.symbol} {plan.prices[currency.code].was}</span>{" "}
-        <span className="text-4xl font-bold text-brand-green">{currency.symbol} {plan.prices[currency.code].now}</span>
+        <span className="text-2xl font-bold text-brand-green sm:text-4xl">{currency.symbol} {plan.prices[currency.code].now}</span>
         <span className="text-sm text-ink/60"> {t("perMonth")}</span>
       </p>
       <p className="mt-2 text-center">
@@ -39,7 +39,7 @@ export default function PlanCard({ plan, currency }: { plan: Plan; currency: Cur
         </span>
       </p>
       <p className="mt-1 text-center text-xs text-ink/50">{t("finalFees")}</p>
-      <ul className="mt-6 flex-1 space-y-2.5 text-sm text-ink/80">
+      <ul className="mt-6 flex-1 space-y-2.5 text-xs text-ink/80 sm:text-sm">
         {plan.features.map((f) => (
           <li key={f} className="flex gap-2">
             <span aria-hidden="true" className="font-bold text-brand-green">✓</span>

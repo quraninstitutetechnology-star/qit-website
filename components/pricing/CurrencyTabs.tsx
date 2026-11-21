@@ -35,7 +35,7 @@ export default function CurrencyTabs({
           </button>
         ))}
       </div>
-      <div className="grid items-stretch gap-6 pt-4 lg:grid-cols-3">
+      <div className="grid grid-cols-2 items-stretch gap-3 pt-4 sm:gap-6 lg:grid-cols-3">
         {plans.map((plan) => (
           <PlanCard key={plan.name} plan={plan} currency={active} />
         ))}

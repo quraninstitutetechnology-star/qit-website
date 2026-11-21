@@ -25,7 +25,7 @@ export default async function AudienceCards() {
 
   return (
     <Section tone="white" eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")}>
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:gap-6 md:grid-cols-3">
         {audiences.map((a, i) => (
           <Reveal key={a.title} delay={i * 0.1}>
             <Card className="flex h-full flex-col overflow-hidden">
@@ -33,7 +33,7 @@ export default async function AudienceCards() {
                 <Image src={audienceAssets[i].img} alt={a.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </div>
               <div className="flex flex-1 flex-col items-center p-7 text-center">
-                <h3 className="text-xl font-bold text-brand-dark">{a.title}</h3>
+                <h3 className="text-base font-bold text-brand-dark sm:text-xl">{a.title}</h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{a.text}</p>
                 <Link
                   href={audienceAssets[i].href}

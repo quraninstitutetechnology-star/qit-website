@@ -13,7 +13,7 @@ export default function CoursePreview() {
       title="A Course for Every Age and Level"
       intro="From the very first letter of Noorani Qaida to Hifz and Tafsir — follow one clear pathway, at your own pace."
     >
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
         {courses.slice(0, 6).map((course, i) => (
           <Reveal key={course.slug} delay={(i % 3) * 0.08}>
             <CourseCard course={course} />

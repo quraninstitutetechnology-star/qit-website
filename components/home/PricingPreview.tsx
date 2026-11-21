@@ -13,7 +13,7 @@ export default function PricingPreview() {
       title="Simple Monthly Plans"
       intro="Choose how many classes you want each week. Every plan starts with a free trial class."
     >
-      <div className="grid items-stretch gap-6 pt-4 lg:grid-cols-3">
+      <div className="grid grid-cols-2 items-stretch gap-3 pt-4 sm:gap-6 lg:grid-cols-3">
         {plans.map((plan, i) => (
           <Reveal key={plan.name} delay={i * 0.08}>
             <PlanCard plan={plan} currency={currencies[0]} />

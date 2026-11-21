@@ -22,7 +22,7 @@ export default async function HowItWorks() {
 
   return (
     <Section eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")}>
-      <ol className="grid gap-6 md:grid-cols-3">
+      <ol className="grid grid-cols-2 gap-3 sm:gap-6 md:grid-cols-3">
         {steps.map((step, i) => (
           <li key={step.title}>
             <Reveal delay={i * 0.1}>

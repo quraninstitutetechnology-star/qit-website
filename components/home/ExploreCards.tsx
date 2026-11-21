@@ -31,7 +31,7 @@ export default async function ExploreCards() {
   return (
     <section aria-label={t("aria")} className="bg-white py-14 sm:py-20">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:gap-6 md:grid-cols-2">
           {cards.map((card, i) => (
             <Reveal key={cardAssets[i].href} delay={i * 0.08}>
               <Card className="flex h-full flex-col overflow-hidden">
@@ -44,8 +44,8 @@ export default async function ExploreCards() {
                     className="object-cover"
                   />
                 </div>
-                <div className="flex flex-1 flex-col items-center p-8 text-center">
-                  <h2 className="text-2xl font-bold text-brand-dark">{card.title}</h2>
+                <div className="flex flex-1 flex-col items-center p-4 text-center sm:p-8">
+                  <h2 className="text-lg font-bold text-brand-dark sm:text-2xl">{card.title}</h2>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{card.text}</p>
                   <Button href={cardAssets[i].href} variant={cardAssets[i].variant} className="mt-6">
                     {card.cta} →

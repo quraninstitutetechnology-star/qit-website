@@ -32,14 +32,14 @@ export default async function WhyQit() {
 
   return (
     <Section eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")}>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
         {features.map((f, i) => (
           <Reveal key={f.title} delay={(i % 3) * 0.08}>
             <Card className="h-full overflow-hidden">
               <div className="relative aspect-[3/2] w-full">
                 <Image src={featureImages[i]} alt={f.alt} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" />
               </div>
-              <div className="p-7">
+              <div className="p-4 sm:p-7">
                 <h3 className="text-lg font-bold text-brand-dark">{f.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink/70">{f.text}</p>
               </div>

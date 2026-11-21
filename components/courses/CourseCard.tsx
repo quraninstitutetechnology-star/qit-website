@@ -34,13 +34,13 @@ export default function CourseCard({ course }: { course: Course }) {
       {/* Card stays clean/professional per Ali (2026-10-24): cover, level,
           title and audience only — tagline & format details live on the
           course page, not the card. */}
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-xl font-bold text-brand-dark">{course.title}</h3>
+      <div className="flex flex-1 flex-col p-3.5 sm:p-6">
+        <h3 className="text-base font-bold text-brand-dark sm:text-xl">{course.title}</h3>
         <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-gold-dark">{course.audienceLabel}</p>
         <div className="mt-auto flex flex-wrap gap-2 pt-5">
           <Link
             href={`/courses/${course.slug}`}
-            className="inline-flex min-h-[44px] items-center rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-dark active:scale-[0.97] motion-reduce:transform-none"
+            className="inline-flex min-h-[44px] items-center rounded-full bg-brand-green px-3 py-2 text-xs font-semibold sm:px-5 sm:py-2.5 sm:text-sm text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-dark active:scale-[0.97] motion-reduce:transform-none"
           >
             {t("viewCourse")}
           </Link>
@@ -48,7 +48,7 @@ export default function CourseCard({ course }: { course: Course }) {
             href={whatsappLink(wa.course(course.title))}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center rounded-full border-2 border-gold px-5 py-2.5 text-sm font-semibold text-gold-dark transition-all duration-200 hover:-translate-y-0.5 hover:bg-gold hover:text-brand-dark active:scale-[0.97] motion-reduce:transform-none"
+            className="inline-flex min-h-[44px] items-center rounded-full border-2 border-gold px-3 py-2 text-xs font-semibold sm:px-5 sm:py-2.5 sm:text-sm text-gold-dark transition-all duration-200 hover:-translate-y-0.5 hover:bg-gold hover:text-brand-dark active:scale-[0.97] motion-reduce:transform-none"
           >
             {t("freeTrial")}
           </a>

@@ -81,7 +81,7 @@ export default async function AboutPage({
 
       {/* Values */}
       <Section tone="white" title={t("valuesTitle")}>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {values.map((v, i) => (
             <Reveal key={v.title} delay={i * 0.07}>
               <Card className="h-full p-6 text-center">
@@ -106,7 +106,7 @@ export default async function AboutPage({
             </Link>
           ))}
         </div>
-        <div className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-3 sm:gap-6 md:grid-cols-2">
           <Card className="p-6">
             <h2 className="font-bold text-brand-dark">{t("onlineCardTitle")}</h2>
             <p className="mt-2 text-sm leading-relaxed text-ink/70">{t("onlineCardText")}</p>
